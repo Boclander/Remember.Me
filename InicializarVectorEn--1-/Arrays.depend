@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1536584173 source:c:\users\alumno\desktop\asd\arrays\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1536586386 source:c:\users\alumno\desktop\asd\inicializarvectoren--1-\main.c
+	<stdio.h>
+	<stdlib.h>
+
