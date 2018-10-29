@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1540780716 source:h:\do you know me\remember_me\program.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"program.h"
+
+1540780610 source:h:\do you know me\remember_me\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"program.h"
+
+1540778830 h:\do you know me\remember_me\program.h
+
+1540780610 source:h:\remember.me\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"program.h"
+
+1540778830 h:\remember.me\program.h
+
+1540780716 source:h:\remember.me\program.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"program.h"
+
+1540846233 source:c:\users\bruno\desktop\nuevo repo github remember.me\remember.me\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"stdfix.h"
+	<time.h>
+	"program.h"
+
+1540843725 c:\users\bruno\desktop\nuevo repo github remember.me\remember.me\program.h
+
+1540846959 source:c:\users\bruno\desktop\nuevo repo github remember.me\remember.me\program.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"stdfix.h"
+	<time.h>
+	"program.h"
+

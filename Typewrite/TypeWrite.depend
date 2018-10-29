@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1540837209 source:c:\users\bruno\desktop\typewrite\typewrite\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"stdfix.h"
+
