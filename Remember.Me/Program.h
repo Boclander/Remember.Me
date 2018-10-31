@@ -20,4 +20,5 @@ int pregunta_Diez(int);
 void recuentoPuntaje(int);
 void caseDiez(void);
 void coordenadas(void);
+void bigDaddy();
 #endif // Program
