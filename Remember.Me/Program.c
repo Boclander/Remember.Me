@@ -45,6 +45,7 @@ void inicio(void)
     printf("\n");
     printf("\n");
     printf("                                                 Developed by: Me 28/10/18\n");
+    printf("                                                            V 0.0.1\n");
     system("pause");
 }
 
@@ -346,4 +347,423 @@ int pregunta_Cinco(int puntaje)
     }
     delay(2);
     return puntaje;
+}
+
+int pregunta_Seis(int puntaje)
+{
+    int rta;
+
+    system("pause");
+    system("cls");
+    delay(1);
+
+    printf("\n");
+    printf("\n");
+    Type("      6. Que numero era nuestra habitacion?\n");
+    delay(1);
+    printf("\n");
+    printf("\n");
+    scanf("%d", &rta);
+
+    if(rta == 12)
+    {
+        puntaje++;
+    }
+    delay(1);
+    return puntaje;
+}
+
+int pregunta_Siete(int puntaje)
+{
+    char rta;
+
+    system("pause");
+    system("cls");
+    delay(1);
+
+    printf("\n");
+    printf("\n");
+    Type("      7. Que pedimos la primera vez que fuimos a tomar caf");
+    printf("%c?\n", 130);
+
+    delay(1);
+    printf("\n");
+    printf("\n");
+    Type("      A) T");
+    printf("%c", 130);
+    Type(" de frutos rojos y Mocha.         B) Macchiato y Mocha.\n");
+    printf("\n");
+    Type("      C) Macchiato y Avellana.               D) Ninguna de las anteriores.\n");
+    printf("\n");
+    printf("\n");
+    fflush(stdin);
+    scanf("%c", &rta);
+    fflush(stdin);
+
+    if(rta == 'c' || rta == 'C')
+    {
+        puntaje++;
+    }
+    delay(1);
+    return puntaje;
+}
+
+int pregunta_Ocho(int puntaje)
+{
+    char rta;
+
+    system("pause");
+    system("cls");
+    delay(1);
+
+    printf("\n");
+    printf("\n");
+    Type("      8. Me gusta mas dar besos o recibirlos?\n");
+    printf("\n");
+    printf("\n");
+    printf("        A) Darlos.           B) Recibirlos.\n");
+    printf("\n");
+    printf("\n");
+    fflush(stdin);
+    scanf("%c", &rta);
+    fflush(stdin);
+
+    if(rta == 'b' || rta == 'B')
+    {
+        puntaje++;
+    }
+    delay(1);
+    return puntaje;
+}
+
+int pregunta_Nueve(int puntaje)
+{
+    char rta;
+
+    system("pause");
+    system("cls");
+    delay(1);
+
+    printf("\n");
+    printf("\n");
+    Type("      9. Nos guiamos por el cerebro o el corazon?\n");
+    printf("\n");
+    printf("\n");
+    printf("        A) Cerebro.           B) Coraz%cn.\n", 149);
+    printf("\n");
+    printf("\n");
+    fflush(stdin);
+    scanf("%c", &rta);
+    fflush(stdin);
+
+    if(rta == 'b' || rta == 'B')
+    {
+        puntaje++;
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("                      ");
+        Type("<");
+        delay(2);
+        Type("3");
+    }
+
+    delay(2);
+    return puntaje;
+}
+
+int pregunta_Diez(int puntaje)
+{
+    char rta[8];
+
+    system("pause");
+    system("cls");
+    delay(1);
+
+    printf("\n");
+    printf("\n");
+    Type("      10.");
+    Type(" After");
+    Type(" all");
+    Type(" this");
+    Type(" time");
+    Type("?\n");
+    printf("\n");
+    printf("\n");
+    gets(&rta);
+
+    if(strcmp(rta, "Always.") == 0 || strcmp(rta, "Always") == 0 || strcmp(rta, "always.") == 0 || strcmp(rta, "always") == 0)
+    {
+        puntaje++;
+    }
+    delay(2);
+    return puntaje;
+}
+
+void recuentoPuntaje(int puntaje)
+{
+    FILE* pArchivo;
+    char image[50][100];
+    int i = 0;
+
+    switch(puntaje)
+    {
+    case 0:
+        cuatroEspacios();
+        pArchivo = fopen("0-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 1:
+        cuatroEspacios();
+        pArchivo = fopen("1-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 2:
+        cuatroEspacios();
+        pArchivo = fopen("2-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 3:
+        cuatroEspacios();
+        pArchivo = fopen("3-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 4:
+        cuatroEspacios();
+        pArchivo = fopen("4-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 5:
+        cuatroEspacios();
+        pArchivo = fopen("5-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 6:
+        cuatroEspacios();
+        pArchivo = fopen("6-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 7:
+        cuatroEspacios();
+        pArchivo = fopen("7-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 8:
+        cuatroEspacios();
+        pArchivo = fopen("8-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 9:
+        cuatroEspacios();
+        pArchivo = fopen("9-10.txt", "r");
+        while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
+        break;
+    case 10:
+        caseDiez();
+        coordenadas();
+        break;
+    }
+
+}
+
+void cuatroEspacios(void)
+{
+    printf("\n");
+    printf("\n");
+    printf("\n");
+    printf("\n");
+}
+
+void caseDiez(void)
+{
+    cuatroEspacios();
+    Type("              * Wow...\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+    Type("              * Despues de tanto...\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+    Type("              * No crei que te acordaras de mi.\n");
+    delay(2);
+
+    system("cls");
+
+    cuatroEspacios();
+    Type("              * Tal vez tenias razon.\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+    Type("              * Tal vez no fue la mejor forma.\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+    Type("              * Ni el mejor momento.\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+
+    system("cls");
+
+    cuatroEspacios();
+    Type("              * Pero fue perfecto.\n");
+    delay(3);
+    printf("\n");
+    printf("\n");
+
+    system("cls");
+
+    cuatroEspacios();
+    Type("              * Ah, cierto.\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+    Type("              * El premio.\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+
+    system("cls");
+
+    cuatroEspacios();
+    Type("              * ¿Sabes?\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+    Type("              * En realidad ya estaba destinado.\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+    Type("              * Todo lo que hiciste para llegar hasta aca.\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+
+    system("cls");
+
+    cuatroEspacios();
+    Type("              * Y una vez mas me probaste que valemos la pena.\n");
+    delay(2);
+    printf("\n");
+    printf("\n");
+
+    system("cls");
+
+    cuatroEspacios();
+    Type("               T ");
+    Type("E ");
+    Type("  ");
+    Type("A ");
+    Type("M ");
+    Type("O ");
+    Type("  ");
+    Type("L ");
+    Type("A ");
+    Type("R ");
+    Type("A ");
+    Type(".\n");
+}
+
+void coordenadas(void)
+{
+    system("cls");
+    cuatroEspacios();
+    printf("            -45.034167              168.662000\n");
+    printf("\n");
+    printf("\n");
+    printf("                     * I'm waiting\n");
+    cuatroEspacios();
+    printf("               -->    https://photos.app.goo.gl/7vQHQrCFwKU4M2Ks9\n");
+    system("pause");
 }
