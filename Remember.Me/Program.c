@@ -9,22 +9,7 @@
 void inicio(void)
 {
     system("cls");
-
-    FILE* pArchivo;
-    char image[50][100];
-    int i = 0;
-
-    pArchivo = fopen("Inicio.txt", "r");
-    while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+    mostrarTxt("Inicio.txt");
     printf("\n");
     printf("\n");
     printf("\n");
@@ -49,27 +34,6 @@ void inicio(void)
     system("pause");
 }
 
-void title(void)
-{
-    system("cls");
-
-    FILE* pArchivo;
-    char image[50][100];
-    int i = 0;
-
-    pArchivo = fopen("Inicio.txt", "r");
-    while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
-}
-
 void Type(const char* p)
 {
     if(p != NULL)
@@ -77,11 +41,14 @@ void Type(const char* p)
         while(*p)
         {
             printf("%c|", *p++);
-            ;;Sleep(40);
+            ;;
+            Sleep(40);
             printf("\b \b");
-            ;;Sleep(40);
+            ;;
+            Sleep(40);
         }
-        ;;Sleep(600);
+        ;;
+        Sleep(600);
     }
 }
 
@@ -100,10 +67,8 @@ void delay(int number_of_seconds)
 
 void menuP(void)
 {
-    FILE* pArchivo;
-    char image[50][100];
-    int i = 0;
-
+    system("cls");
+    mostrarTxt("Inicio.txt");
     printf("\n");
     printf("\n");
     Type("* Esto es algo que hice solo para vos.\n");
@@ -123,17 +88,7 @@ void menuP(void)
     printf("%c", 151);
     Type("sica, tal vez la quieras escuchar mientras tanto.\n");
 
-    pArchivo = fopen("StartArrow.txt", "r");
-    while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+    mostrarTxt("StartArrow.txt");
     printf("\n");
     printf("\n");
 
@@ -149,9 +104,9 @@ void preguntarNombre(void)
 
     printf("Ingrese nombre: \n");
     printf("\n");
-    gets(&nombre);
+    gets(nombre);
 
-    if(strcmp(nombre ,"Lara") != 0 && strcmp(nombre, "Lara Petersen") != 0 && strcmp(nombre, "lara") != 0)
+    if(strcmp(nombre,"Lara") != 0 && strcmp(nombre, "Lara Petersen") != 0 && strcmp(nombre, "lara") != 0)
     {
         exit(EXIT_SUCCESS);
     }
@@ -205,7 +160,7 @@ int pregunta_Uno(int puntaje)
     Type("      1. Cual era mi signo del Zodiaco?\n");
     printf("\n");
     printf("\n");
-    gets(&rta);
+    gets(rta);
 
     if(strcmp(rta, "Acuario") == 0 || strcmp(rta, "acuario") == 0)
     {
@@ -299,7 +254,7 @@ int pregunta_Cuatro(int puntaje)
     printf("\n");
     delay(1);
     printf("\n");
-    gets(&rta);
+    gets(rta);
 
     if(strcmp(rta, "No") == 0 || strcmp(rta, "no") == 0)
     {
@@ -323,27 +278,12 @@ int pregunta_Cinco(int puntaje)
     delay(1);
     printf("\n");
     printf("\n");
-    gets(&rta);
+    gets(rta);
 
-    if(strcmp(rta,"New Zealand")==0||strcmp(rta,"new zealand")==0||strcmp(rta,"Nueva Zelanda")==0||strcmp(rta,"nueva zelanda"==0))
+    if(strcmp(rta,"New Zealand") || strcmp(rta,"new zealand") || strcmp(rta,"Nueva Zelanda") || strcmp(rta,"nueva zelanda"))
     {
         puntaje++;
-
-        FILE* pArchivo;
-        char image[50][100];
-        int i = 0;
-
-        pArchivo = fopen("SilverFern.txt", "r");
-        while(!feof(pArchivo))
-        {
-            fgets(image[i], 100, pArchivo);
-            i++;
-        }
-        for(i=0; i<50; i++)
-        {
-            printf("%s", image[i]);
-        }
-        fclose(pArchivo);
+        mostrarTxt("SilverFern.txt");
     }
     delay(2);
     return puntaje;
@@ -389,11 +329,9 @@ int pregunta_Siete(int puntaje)
     delay(1);
     printf("\n");
     printf("\n");
-    Type("      A) T");
-    printf("%c", 130);
-    Type(" de frutos rojos y Mocha.         B) Macchiato y Mocha.\n");
+    printf("      A) T%c de frutos rojos y Mocha.         B) Macchiato y Mocha.\n", 130);
     printf("\n");
-    Type("      C) Macchiato y Avellana.               D) Ninguna de las anteriores.\n");
+    printf("      C) Macchiato y Avellana.               D) Otro.\n");
     printf("\n");
     printf("\n");
     fflush(stdin);
@@ -459,6 +397,7 @@ int pregunta_Nueve(int puntaje)
     if(rta == 'b' || rta == 'B')
     {
         puntaje++;
+        delay(1);
         printf("\n");
         printf("\n");
         printf("\n");
@@ -490,7 +429,7 @@ int pregunta_Diez(int puntaje)
     Type("?\n");
     printf("\n");
     printf("\n");
-    gets(&rta);
+    gets(rta);
 
     if(strcmp(rta, "Always.") == 0 || strcmp(rta, "Always") == 0 || strcmp(rta, "always.") == 0 || strcmp(rta, "always") == 0)
     {
@@ -502,158 +441,95 @@ int pregunta_Diez(int puntaje)
 
 void recuentoPuntaje(int puntaje)
 {
-    FILE* pArchivo;
-    char image[50][100];
-    int i = 0;
 
     switch(puntaje)
     {
     case 0:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("0-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Cero.txt");
+        cuatroEspacios();
         break;
     case 1:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("1-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Uno.txt");
+        cuatroEspacios();
         break;
     case 2:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("2-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Dos.txt");
+        cuatroEspacios();
         break;
     case 3:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("3-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Tres.txt");
+        cuatroEspacios();
         break;
     case 4:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("4-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Cuatro.txt");
+        cuatroEspacios();
         break;
     case 5:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("5-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Cinco.txt");
+        cuatroEspacios();
         break;
     case 6:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("6-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Seis.txt");
+        cuatroEspacios();
         break;
     case 7:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("7-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Siete.txt");
+        cuatroEspacios();
         break;
     case 8:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("8-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Ocho.txt");
+        cuatroEspacios();
         break;
     case 9:
+        system("cls");
         cuatroEspacios();
-        pArchivo = fopen("9-10.txt", "r");
-        while(!feof(pArchivo))
-    {
-        fgets(image[i], 100, pArchivo);
-        i++;
-    }
-    for(i=0; i<5; i++)
-    {
-        printf("%s", image[i]);
-    }
-    fclose(pArchivo);
+        mostrarTxt("Nueve.txt");
+        cuatroEspacios();
         break;
     case 10:
         caseDiez();
+        system("COLOR F");
         coordenadas();
         break;
     }
 
+}
+
+void mostrarTxt(char* nombreDeArchivo)
+{
+    FILE* pArchivo;
+    char image[50][100];
+    int i = 0;
+
+    pArchivo = fopen(nombreDeArchivo, "r");
+    while(!feof(pArchivo))
+    {
+        fgets(image[i], 100, pArchivo);
+        i++;
+    }
+    for(i=0; i<5; i++)
+    {
+        printf("%s", image[i]);
+    }
+    fclose(pArchivo);
 }
 
 void cuatroEspacios(void)
@@ -717,7 +593,7 @@ void caseDiez(void)
     system("cls");
 
     cuatroEspacios();
-    Type("              * ¿Sabes?\n");
+    Type("              * Sabes?\n");
     delay(2);
     printf("\n");
     printf("\n");
@@ -741,6 +617,7 @@ void caseDiez(void)
     system("cls");
 
     cuatroEspacios();
+    system("COLOR C");
     Type("               T ");
     Type("E ");
     Type("  ");
@@ -753,6 +630,7 @@ void caseDiez(void)
     Type("R ");
     Type("A ");
     Type(".\n");
+    delay(3);
 }
 
 void coordenadas(void)
@@ -768,12 +646,11 @@ void coordenadas(void)
     system("pause");
 }
 
-void bigDaddy()
+void bigDaddy(void)
 {
-        int puntaje = 0;
+    int puntaje = 0;
 
     inicio();
-    title();
     menuP();
     preguntarNombre();
     instrucciones();
@@ -856,5 +733,4 @@ void bigDaddy()
     printf("\n");
     puntaje = pregunta_Diez(puntaje);
     recuentoPuntaje(puntaje);
-
 }

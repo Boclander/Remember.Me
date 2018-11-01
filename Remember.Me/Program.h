@@ -19,6 +19,7 @@ int pregunta_Nueve(int);
 int pregunta_Diez(int);
 void recuentoPuntaje(int);
 void caseDiez(void);
+void mostrarTxt(char*);
 void coordenadas(void);
-void bigDaddy();
+void bigDaddy(void);
 #endif // Program

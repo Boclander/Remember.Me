@@ -47,3 +47,23 @@
 	<time.h>
 	"program.h"
 
+1541100431 source:c:\users\bruno\desktop\remember.me\remember.me\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"stdfix.h"
+	<time.h>
+	"program.h"
+
+1541100431 c:\users\bruno\desktop\remember.me\remember.me\program.h
+
+1541100442 source:c:\users\bruno\desktop\remember.me\remember.me\program.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"stdfix.h"
+	<time.h>
+	"program.h"
+

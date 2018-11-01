@@ -6,6 +6,7 @@
 #include <time.h>
 #include "program.h"
 
+    // Nothing to look at, just press F9 (or that Play button above).
 int main()
 {
     bigDaddy();
